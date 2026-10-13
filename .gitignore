@@ -1,0 +1,18 @@
+# סודות
+.env
+.env.*
+!.env.example
+workflow_agent_try.py
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# IDE / מערכת הפעלה
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-13T13:21:08+03:00",
+  "sources": [
+    {
+      "tool": "kiro",
+      "root_path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Kiro-steering",
+      "files": [
+        {
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Kiro-steering\\product.md",
+          "last_modified": "2026-09-07T13:18:40+03:00",
+          "hash": "sha256:f1db49456c7078707c6a083703e59985be5107c4814be3bf2a7a0c5320468306"
+        },
+        {
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Kiro-steering\\structure.md",
+          "last_modified": "2026-09-07T13:19:24+03:00",
+          "hash": "sha256:fc4585785a4342377aa6dcd206dc3e13d35ec45faa15f4935fad1027d83c0be8"
+        },
+        {
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Kiro-steering\\tech.md",
+          "last_modified": "2026-09-07T13:19:17+03:00",
+          "hash": "sha256:9335b82d790f3eb1ef56aed6eb235cbd755dc2d13b5f6e13e245d4b90a92eafe"
+        }
+      ]
+    },
+    {
+      "tool": "gemini",
+      "root_path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md",
+      "files": [
+        {
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\DECISIONS.md",
+          "last_modified": "2026-10-11T14:45:08+03:00",
+          "hash": "sha256:c5933e1b225b2423d9bc0aa571d0371871a15d04ea6d8a1f7f99952d1cf625aa"
+        },
+        {
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\GEMINI.md",
+          "last_modified": "2026-10-11T14:44:39+03:00",
+          "hash": "sha256:004c7d4f94310b2a4a22d00055e44dca3602da74c32e03877a855b0b03ca3d25"
+        },
+        {
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\WARNINGS.md",
+          "last_modified": "2026-10-11T14:45:47+03:00",
+          "hash": "sha256:942f76f1765223737c0d9c0c07b3a5b4c8d6834a5d78f289be36cf7dc8c06b67"
+        }
+      ]
+    }
+  ],
+  "items": {
+    "decisions": [
+      {
+        "id": "dec-001",
+        "title": "Use SQLite for storage",
+        "summary": "Chose SQLite over a JSON file for better query support, concurrent access, and no external server requirement.",
+        "tags": [
+          "db"
+        ],
+        "source": {
+          "tool": "gemini",
+          "file": "DECISIONS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\DECISIONS.md",
+          "anchor": "Decision 1: Use SQLite for storage (2026-09-15)"
+        },
+        "observed_at": "2026-09-15",
+        "date_from_text": true
+      },
+      {
+        "id": "dec-002",
+        "title": "Use argparse instead of Click",
+        "summary": "Chose argparse to avoid extra dependencies, as Click was deemed unnecessary for a simple CLI.",
+        "tags": [],
+        "source": {
+          "tool": "gemini",
+          "file": "DECISIONS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\DECISIONS.md",
+          "anchor": "Decision 2: Use argparse instead of Click (2026-09-17)"
+        },
+        "observed_at": "2026-09-17",
+        "date_from_text": true
+      },
+      {
+        "id": "dec-003",
+        "title": "Store timestamps in UTC",
+        "summary": "All task timestamps are stored in UTC to prevent daylight saving time bugs, with local time conversion on display.",
+        "tags": [],
+        "source": {
+          "tool": "gemini",
+          "file": "DECISIONS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\DECISIONS.md",
+          "anchor": "Decision 3: Store timestamps in UTC (2026-09-22)"
+        },
+        "observed_at": "2026-09-22",
+        "date_from_text": true
+      },
+      {
+        "id": "dec-004",
+        "title": "Adopt pytest as the testing framework",
+        "summary": "Chose pytest for its simpler syntax and fixtures, migrating all existing tests.",
+        "tags": [],
+        "source": {
+          "tool": "gemini",
+          "file": "DECISIONS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\DECISIONS.md",
+          "anchor": "Decision 4: Adopt pytest as the testing framework (2026-10-02)"
+        },
+        "observed_at": "2026-10-02",
+        "date_from_text": true
+      },
+      {
+        "id": "dec-005",
+        "title": "Add a `priority` column to the tasks table",
+        "summary": "Added a 'priority' column to the tasks table for task prioritization, and removed the unused 'notes' column.",
+        "tags": [
+          "db"
+        ],
+        "source": {
+          "tool": "gemini",
+          "file": "DECISIONS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\DECISIONS.md",
+          "anchor": "Decision 5: Add a `priority` column to the tasks table (2026-10-07)"
+        },
+        "observed_at": "2026-10-07",
+        "date_from_text": true
+      }
+    ],
+    "rules": [
+      {
+        "id": "rule-001",
+        "rule": "Use type hints on every function signature.",
+        "scope": "general",
+        "notes": null,
+        "status": "active",
+        "source": {
+          "tool": "gemini",
+          "file": "GEMINI.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\GEMINI.md",
+          "anchor": "Coding Rules"
+        },
+        "observed_at": "2026-10-11T14:44:39+03:00",
+        "date_from_text": false
+      },
+      {
+        "id": "rule-002",
+        "rule": "Follow PEP 8 naming: snake_case for functions and variables, PascalCase for classes.",
+        "scope": "general",
+        "notes": null,
+        "status": "active",
+        "source": {
+          "tool": "gemini",
+          "file": "GEMINI.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\GEMINI.md",
+          "anchor": "Coding Rules"
+        },
+        "observed_at": "2026-10-11T14:44:39+03:00",
+        "date_from_text": false
+      },
+      {
+        "id": "rule-003",
+        "rule": "Keep functions under 50 lines.",
+        "scope": "general",
+        "notes": null,
+        "status": "superseded",
+        "source": {
+          "tool": "gemini",
+          "file": "GEMINI.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\GEMINI.md",
+          "anchor": "Rule Update (2026-09-28)"
+        },
+        "observed_at": "2026-09-28",
+        "date_from_text": true
+      },
+      {
+        "id": "rule-004",
+        "rule": "Keep functions under 30 lines.",
+        "scope": "general",
+        "notes": "Older code should be refactored gradually.",
+        "status": "active",
+        "source": {
+          "tool": "gemini",
+          "file": "GEMINI.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\GEMINI.md",
+          "anchor": "Rule Update (2026-09-28)"
+        },
+        "observed_at": "2026-09-28",
+        "date_from_text": true
+      },
+      {
+        "id": "rule-005",
+        "rule": "All database access must go through `db.py`. Never call sqlite3 directly from `cli.py`.",
+        "scope": "db",
+        "notes": null,
+        "status": "active",
+        "source": {
+          "tool": "gemini",
+          "file": "GEMINI.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\GEMINI.md",
+          "anchor": "Coding Rules"
+        },
+        "observed_at": "2026-10-11T14:44:39+03:00",
+        "date_from_text": false
+      },
+      {
+        "id": "rule-006",
+        "rule": "Every new feature requires at least one pytest test.",
+        "scope": "testing",
+        "notes": null,
+        "status": "active",
+        "source": {
+          "tool": "gemini",
+          "file": "GEMINI.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\GEMINI.md",
+          "anchor": "Coding Rules"
+        },
+        "observed_at": "2026-10-11T14:44:39+03:00",
+        "date_from_text": false
+      },
+      {
+        "id": "rule-007",
+        "rule": "User-facing messages must be in English and must not include stack traces.",
+        "scope": "ui",
+        "notes": null,
+        "status": "active",
+        "source": {
+          "tool": "gemini",
+          "file": "GEMINI.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\GEMINI.md",
+          "anchor": "Coding Rules"
+        },
+        "observed_at": "2026-10-11T14:44:39+03:00",
+        "date_from_text": false
+      }
+    ],
+    "warnings": [
+      {
+        "id": "warn-001",
+        "area": "Database migration script",
+        "message": "The file `todo/migrations.py` modifies the live database schema. Do not edit it without running the full test suite and backing up `tasks.db`. A mistake here can cause permanent data loss.",
+        "severity": "high",
+        "source": {
+          "tool": "gemini",
+          "file": "WARNINGS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\WARNINGS.md",
+          "anchor": "Warning 1: Database migration script (severity: high)"
+        },
+        "observed_at": "2026-10-07",
+        "date_from_text": true
+      },
+      {
+        "id": "warn-002",
+        "area": "Timestamp handling in `models.py`",
+        "message": "All timestamps must remain in UTC. Changing the timezone logic can silently break sorting and the overdue-task calculation. Do not touch this code without testing.",
+        "severity": "medium",
+        "source": {
+          "tool": "gemini",
+          "file": "WARNINGS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\WARNINGS.md",
+          "anchor": "Warning 2: Timestamp handling in `models.py` (severity: medium)"
+        },
+        "observed_at": "2026-10-05",
+        "date_from_text": true
+      },
+      {
+        "id": "warn-003",
+        "area": "Command-line argument parsing",
+        "message": "Changing flag names in `cli.py` breaks existing user scripts. Any change to flags must be backward compatible, or documented as a breaking change.",
+        "severity": "medium",
+        "source": {
+          "tool": "gemini",
+          "file": "WARNINGS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\WARNINGS.md",
+          "anchor": "Warning 3: Command-line argument parsing (severity: medium)"
+        },
+        "observed_at": "2026-10-09",
+        "date_from_text": true
+      }
+    ],
+    "schema_changes": [
+      {
+        "id": "schema-001",
+        "table": "tasks",
+        "field": "priority",
+        "change_type": "added",
+        "description": "Column for task priority levels (low, medium, high)",
+        "source": {
+          "tool": "gemini",
+          "file": "DECISIONS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\DECISIONS.md",
+          "anchor": "Decision 5: Add a `priority` column to the tasks table (2026-10-07)"
+        },
+        "observed_at": "2026-10-07",
+        "date_from_text": true
+      },
+      {
+        "id": "schema-002",
+        "table": "tasks",
+        "field": "notes",
+        "change_type": "removed",
+        "description": "Unused column",
+        "source": {
+          "tool": "gemini",
+          "file": "DECISIONS.md",
+          "path": "C:\\Users\\PC\\Desktop\\AI ברוק\\RAG-LlamaIndex-Starter\\Gemini-md\\DECISIONS.md",
+          "anchor": "Decision 5: Add a `priority` column to the tasks table (2026-10-07)"
+        },
+        "observed_at": "2026-10-07",
+        "date_from_text": true
+      }
+    ]
+  }
+}
