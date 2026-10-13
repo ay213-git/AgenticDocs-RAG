@@ -166,3 +166,5 @@ uv run workflow_agent.py
 <img width="750" height="829" alt="image" src="https://github.com/user-attachments/assets/a0ab75f8-9868-4b5e-b0de-8b87007ef1a5" />
 
 <img width="531" height="438" alt="image" src="https://github.com/user-attachments/assets/663449c7-9311-4b96-a4bf-a63275dd18e7" />
+<img width="910" height="417" alt="image" src="https://github.com/user-attachments/assets/4378d38b-87ff-49ee-b51d-7f25268dc81c" />
+
