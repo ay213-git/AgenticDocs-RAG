@@ -92,7 +92,7 @@ uv run extract.py
 uv run workflow_agent.py
 ```
 
-ואז פותחים **http://127.0.0.1:7860**
+ואז פותחים **http://127.0.0.1:7861**
 
 > 💡 אם משנים את קבצי ה-md, מוחקים את ה-namespace ב-Pinecone לפני הרצה חוזרת של `prepare.py`, כדי שלא יישמרו כפילויות.
 
